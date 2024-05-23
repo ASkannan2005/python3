@@ -1,0 +1,22 @@
+def main():
+    # Input number of elements
+    num_elements = int(input("Enter number of elements: "))
+
+    # Initialize an empty array to store the elements
+    elements = []
+
+    # Input elements from the user
+    for i in range(1, num_elements + 1):
+        element = int(input(f"Enter element {i}: "))
+        elements.append(element)
+
+    # Find the largest and smallest elements
+    largest = max(elements)
+    smallest = min(elements)
+
+    # Display the results
+    print("Largest element:", largest)
+    print("Smallest element:", smallest)
+
+if __name__ == "__main__":
+    main()
