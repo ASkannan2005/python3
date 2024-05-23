@@ -1,0 +1,23 @@
+def main():
+    num_values = int(input("Enter how many values you want to read: "))
+    
+    array_a = []
+    array_b = []
+
+    print("For Array A:")
+    for i in range(num_values):
+        value = int(input(f"Enter the value of a[{i}]: "))
+        array_a.append(value)
+
+    print("For Array B:")
+    for i in range(num_values):
+        value = int(input(f"Enter the value of b[{i}]: "))
+        array_b.append(value)
+
+    if array_a == array_b:
+        print("Both arrays are equal")
+    else:
+        print("Both arrays are not equal")
+
+if __name__ == "__main__":
+    main()
