@@ -1,0 +1,25 @@
+import math
+
+def calculate_mean(values):
+    return sum(values) / len(values)
+
+def calculate_variance(values, mean):
+    return sum((x - mean) ** 2 for x in values) / len(values)
+
+def calculate_deviation(variance):
+    return math.sqrt(variance)
+
+def main():
+    num_values = int(input("Enter the number of values: "))
+    values = list(map(float, input("Enter values: ").split()))
+
+    mean = calculate_mean(values)
+    variance = calculate_variance(values, mean)
+    deviation = calculate_deviation(variance)
+
+    print(f"Mean = {mean:.2f}")
+    print(f"Variance = {variance:.2f}")
+    print(f"Deviation = {deviation:.2f}")
+
+if __name__ == "__main__":
+    main()
