@@ -1,0 +1,26 @@
+import math
+
+def largest_not_perfect_square(arr):
+    largest = -1
+
+    for num in arr:
+        if math.sqrt(num) % 1 != 0 and num > largest:
+            largest = num
+
+    return largest
+
+def main():
+    size = int(input("Enter array size: "))
+    
+    if size <= 0:
+        print("Invalid input")
+        return
+
+    elements = list(map(int, input("Enter array elements: ").split()))
+
+    result = largest_not_perfect_square(elements)
+
+    print(result)
+
+if __name__ == "__main__":
+    main()
