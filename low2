@@ -1,0 +1,22 @@
+def search_element(arr, key):
+    for i, element in enumerate(arr, 1):
+        if element == key:
+            return i
+    return -1
+
+def main():
+    size = int(input("Enter size: "))
+
+    elements = list(map(int, input("Enter elements: ").split()))
+    search_key = int(input("Enter search key: "))
+
+    position = search_element(elements, search_key)
+
+
+    if position != -1:
+        print(f"{search_key} found at position {position}")
+    else:
+        print(f"{search_key} not found")
+
+if __name__ == "__main__":
+    main()
