@@ -1,0 +1,32 @@
+def move_zeros_to_end(arr):
+    n = len(arr)
+    count = 0  # Count of non-zero elements
+
+    # Traverse the array. If element encountered is non-zero,
+    # then replace the element at index 'count' with this element
+    for i in range(n):
+        if arr[i] != 0:
+            arr[count] = arr[i]
+            count += 1
+
+    # Now all non-zero elements have been shifted to front and 'count' is set as index of first 0.
+    # Make all elements 0 from count to end.
+    while count < n:
+        arr[count] = 0
+        count += 1
+
+def main():
+    size = int(input("Enter array size: "))
+    
+    if size <= 0:
+        print("Invalid input")
+        return
+
+    elements = list(map(int, input("Enter array elements: ").split()))
+
+    move_zeros_to_end(elements)
+
+    print(*elements)
+
+if __name__ == "__main__":
+    main()
