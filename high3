@@ -1,0 +1,31 @@
+def find_last_duplicate(arr):
+    n = len(arr)
+    last_duplicate_index = -1
+    last_duplicate_item = None
+
+    for i in range(n - 1, 0, -1):
+        if arr[i] == arr[i - 1]:
+            last_duplicate_index = i
+            last_duplicate_item = arr[i]
+            break
+
+    return last_duplicate_index, last_duplicate_item
+
+def main():
+    size = int(input("Enter array size: "))
+    
+    if size <= 0:
+        print("Invalid array size")
+        return
+
+    elements = list(map(int, input(f"Enter sorted array elements: ").split()))
+
+    index, item = find_last_duplicate(elements)
+
+    if index != -1:
+        print(f"Last index: {index}")
+        print(f"Last duplicate item: {item}")
+    else:
+        print("No duplicate found")
+
+if __name__ == "__m
