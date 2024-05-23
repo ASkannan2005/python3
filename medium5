@@ -1,0 +1,29 @@
+def find_repetitive_element(arr):
+    n = len(arr)
+    visited = [False] * n
+
+    for i in range(n):
+        if visited[arr[i]]:
+            return arr[i]
+        visited[arr[i]] = True
+
+    return None
+
+def main():
+    size = int(input("Enter array size: "))
+    
+    if size <= 0:
+        print("Invalid input")
+        return
+
+    elements = list(map(int, input(f"Enter {size} array elements: ").split()))
+
+    repetitive_element = find_repetitive_element(elements)
+
+    if repetitive_element is not None:
+        print(f"The repetitive element: {repetitive_element}")
+    else:
+        print("Array elements are not repeated")
+
+if __name__ == "__main__":
+    main()
