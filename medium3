@@ -1,0 +1,14 @@
+def main():
+    num_values = int(input("Enter how many values you want to read: "))
+    array = []
+
+    for i in range(num_values):
+        value = int(input(f"Enter the value of a[{i}]: "))
+        array.append(value)
+
+    array_sum = sum(array)
+
+    print("The sum of array elements =", array_sum)
+
+if __name__ == "__main__":
+    main()
