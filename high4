@@ -1,0 +1,23 @@
+def calculate_product(arr1, arr2):
+    max_element_arr1 = max(arr1)
+    min_element_arr2 = min(arr2)
+    return max_element_arr1 * min_element_arr2
+
+def main():
+    size1, size2 = map(int, input("Enter size of first and second arrays: ").split())
+    
+    if size1 <= 0 or size2 <= 0:
+        print("Invalid input")
+        return
+
+    arr1 = list(map(int, input("Enter first array elements: ").split()))
+    arr2 = list(map(int, input("Enter second array elements: ").split()))
+
+    max_element_arr1 = max(arr1)
+    min_element_arr2 = min(arr2)
+
+    print(f"max element in first array is {max_element_arr1} and min element in second array is {min_element_arr2}")
+    print(f"The product of these two is {max_element_arr1 * min_element_arr2}")
+
+if __name__ == "__main__":
+    main()
