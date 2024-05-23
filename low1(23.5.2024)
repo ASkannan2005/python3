@@ -1,0 +1,15 @@
+def main():
+    # Input size of array
+    size = int(input("Enter size: "))
+
+    # Input elements of array
+    elements = list(map(int, input("Enter elements: ").split()))
+
+    # Display elements of array
+    print("The elements of array:", end=" ")
+    for element in elements:
+        print(element, end=" ")
+    print()
+
+if __name__ == "__main__":
+    main()
