@@ -1,0 +1,45 @@
+def display_array(arr):
+    print("Array elements:", end=" ")
+    for element in arr:
+        print(element, end=" ")
+    print()
+
+def insert_number(arr, location, number):
+    if location < 1 or location > len(arr) + 1:
+        print("Invalid location")
+    else:
+        arr.insert(location - 1, number)
+        print(f"{number} inserted at location {location}")
+
+def delete_number(arr, location):
+    if location < 1 or location > len(arr):
+        print("Invalid location")
+    else:
+        deleted_number = arr.pop(location - 1)
+        print(f"{deleted_number} deleted from location {location}")
+
+def main():
+    size = int(input("Enter size: "))
+    elements = list(map(int, input(f"Enter {size} elements: ").split()))
+
+    while True:
+        display_array(elements)
+        print("1. Insert a number")
+        print("2. Delete a number")
+        print("3. Exit")
+        choice = int(input("Enter your choice: "))
+
+        if choice == 1:
+            location = int(input("Location: "))
+            number = int(input("Number: "))
+            insert_number(elements, location, number)
+        elif choice == 2:
+            location = int(input("Location: "))
+            delete_number(elements, location)
+        elif choice == 3:
+            break
+        else:
+            print("Invalid choice")
+
+if __name__ == "__main__":
+    main()
